@@ -13,6 +13,7 @@ import { Box, Text, Container, SimpleGrid, Heading, Stack, Link } from "@chakra-
 
 const Podcast = {
     imageURL: '',
+    imageAlt: 'this is suppose to be an image',
     Title: '',
     Date: ''
 }

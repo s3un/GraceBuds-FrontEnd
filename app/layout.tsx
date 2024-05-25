@@ -4,6 +4,7 @@ import "./globals.css";
 import Footer from '../components/footer'
 import Newsletter from '@/components/newsletter'
 import { Providers } from '@/app/provider'
+import Outreach  from '@/components/outreach'
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -21,6 +22,7 @@ export default function RootLayout({
     <html lang="en">
       <Providers>
         <body className={inter.className}>{children}</body>
+        <Outreach />
         <Newsletter></Newsletter>
         <Footer />
       </Providers>
