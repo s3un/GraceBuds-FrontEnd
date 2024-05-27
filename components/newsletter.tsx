@@ -32,7 +32,7 @@ export default function Newsletter() {
                     <Box>
                         <Heading 
                             size={'md'}
-                            pb={10}> Get in Touch! </Heading>
+                            pb={10}> Share your thought! </Heading>
                         <Stack>
                             <Input placeholder='Your Name' htmlSize={50}/>
                             <Input placeholder='Email address'/>

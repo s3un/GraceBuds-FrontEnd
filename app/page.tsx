@@ -1,12 +1,17 @@
-"use client";
 
+import Navbar from '@/components/Navbar';
+import { 
+  Box,
+  Container,
+  Flex,
+  Text } from '@chakra-ui/react'
 
-// import styles from "./page.module.css";
-import { Text,
-         Container } from '@chakra-ui/react'
+const Links = ['Dashboard', 'Projects', 'Team'];
 
 export default function Home() {
-  return (
-    <Text>this is page page</Text>
-  );
+  return(
+      <Box>
+         <Navbar /> 
+      </Box>
+  )
 }

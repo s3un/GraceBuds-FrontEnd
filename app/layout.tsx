@@ -1,10 +1,13 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import Footer from '../components/footer'
-import Newsletter from '@/components/newsletter'
-import { Providers } from '@/app/provider'
-import Outreach  from '@/components/outreach'
+import Footer from "../components/footer";
+import Newsletter from "@/components/newsletter";
+import { Providers } from "@/app/provider";
+import Outreach from "@/components/outreach";
+import Bible from "@/components/biblestudies";
+import Wall from "@/components/wall";
+import Aboutus from "@/components/aboutus";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -20,12 +23,17 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <Providers>
-        <body className={inter.className}>{children}</body>
-        <Outreach />
-        <Newsletter></Newsletter>
-        <Footer />
-      </Providers>
+      <body className={inter.className}>
+        <Providers>
+          {children}
+          <Wall />
+          <Aboutus />
+          <Bible />
+          <Outreach />
+          <Newsletter></Newsletter>
+          <Footer />
+        </Providers>
+      </body>
     </html>
   );
 }
