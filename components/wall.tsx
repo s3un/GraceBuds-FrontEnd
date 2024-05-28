@@ -26,28 +26,42 @@ export default function Wall() {
         bgSize={"cover"}
         backgroundPosition={"center center"}
       >
-        <Container>
+        <Container maxW={'5xl'}>
           <VStack
             py={{ base: 20, md: 60 }}
             direction={{ base: "column", md: "row" }}
           >
             <Stack flex={1} spacing={{ base: 5, md: 10 }}>
               <Text
-                color={"white"}
+                color={"orange"}
                 fontWeight={700}
                 lineHeight={1.2}
-                fontSize={useBreakpointValue({ base: "3xl", md: "4xl" })}
+                textAlign={'center'}
+                fontSize={useBreakpointValue({ base: "3xl", md: "7xl" })}
               >
-                Doing Nothing is Not <br /> An Option of Our Life
+                Jesus is King
+              </Text>
+
+              <Text
+                color={"white"}
+                lineHeight={1.2}
+                textAlign={'center'}
+              >
+                
+
+                Do not be anxious about anything, but in every situation, by prayer and petition,<br /> with thanksgiving, present your requests to God. And the peace of God, <br /> which transcends all understanding, will guard your hearts and your minds in Christ Jesus.
+                <br />
+                <br />Philippians 4:6-7 (NIV)
               </Text>
             </Stack>
 
-            <Stack direction={"row"} mt={90}>
+            <Stack direction={{ base: "column", md : "row" }}spacing={3} mt={90}>
               <Button
-                bg={"blue.400"}
+                bg={"orange"}
                 rounded={"full"}
                 color={"white"}
-                _hover={{ bg: "blue.500" }}
+                size='lg'
+                _hover={{ bg: "orange.500=" }}
               >
                 Bible Study Plan
               </Button>
@@ -55,6 +69,7 @@ export default function Wall() {
                 bg={"whiteAlpha.300"}
                 rounded={"full"}
                 color={"white"}
+                size='lg'
                 _hover={{ bg: "whiteAlpha.500" }}
               >
                 Search the word
@@ -64,13 +79,13 @@ export default function Wall() {
         </Container>
       </Flex>
 
-    <Flex position="relative" zIndex={0} mt={-10}>
+    <Flex position="relative" zIndex={0} mt={-10} flexDirection={{ md : 'column'}}>
         <Container maxW={'6xl'}>
         <SimpleGrid columns={3}>
             <Box bg='#f86f2d'>
                 <Heading
                     p={3}>
-                    Served Over
+                    Daily Prayer
                 </Heading>
 
                 <Text 

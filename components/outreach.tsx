@@ -42,7 +42,7 @@ export default function Outreach() {
             Our Latest Outreach
           </Heading>
         </Center>
-        <Stack direction={{base: "column", md: "row", sm: 'column'}} spacing={'24px'}>
+        <Stack direction={{base: "column", md: "row"}} spacing={'24px'}>
           <Box maxW={'sm'}>
             <Box maxW={350} maxH={200} overflow={"hidden"} borderRadius="lg">
               <Image
