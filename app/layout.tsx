@@ -5,9 +5,10 @@ import Footer from "../components/footer";
 import Newsletter from "@/components/newsletter";
 import { Providers } from "@/app/provider";
 import Outreach from "@/components/outreach";
-import Bible from "@/components/biblestudies";
+// import Bible from "@/components/biblestudies";
 import Wall from "@/components/wall";
 import Aboutus from "@/components/aboutus";
+import Gallery from '@/components/gallery'
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -28,9 +29,9 @@ export default function RootLayout({
           {children}
           <Wall />
           <Aboutus />
-          <Bible />
           <Outreach />
           <Newsletter></Newsletter>
+          <Gallery />
           <Footer />
         </Providers>
       </body>

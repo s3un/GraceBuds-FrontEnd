@@ -17,7 +17,7 @@ import {
 
 import styles from "@/components/global.module.css";
 
-import { TimeIcon, InfoOutlineIcon } from "@chakra-ui/icons";
+import { InfoOutlineIcon, CalendarIcon } from "@chakra-ui/icons";
 import { BiShare } from "react-icons/bi";
 
 const outReach = {
@@ -25,7 +25,7 @@ const outReach = {
   imageAlt: "this is an image",
   location: "Lagos Nigeria",
   name: "World Wide Donation",
-  time: " 10:30AM-03:30PM",
+  time: "Monday, 8:00 Am - Tuesday, 8:00 Pm",
   description:
     "A small river named Duden flows by their place and supplies it with the necessary regelialia.",
 };
@@ -36,48 +36,99 @@ const formattedDated = reachDate.toLocaleDateString();
 export default function Outreach() {
   return (
     <Box m={150}>
-      <Container maxW={"6xl"}>
+      <Container maxW={{ sm : '9xl', lg : '100%'}}>
         <Center>
           <Heading size={"md"} pb={10}>
             Our Latest Outreach
           </Heading>
         </Center>
-        <Stack direction={{base: "column", md: "row"}} spacing={'24px'}>
-          <Box maxW={'sm'}>
-            <Box maxW={350} maxH={200} overflow={"hidden"} borderRadius="lg">
-              <Image
-                objectFit={"cover"}
-                src={outReach.imageUrl}
-                alt={outReach.imageAlt}
-              />
-            </Box>
-            <Box maxW={350}>
-              <HStack pt={5}>
-                <Tag size={"md"} colorScheme="green" borderRadius={"full"}>
-                  <TagLabel>Completed</TagLabel>
-                </Tag>
-                <Text>{formattedDated}</Text>
-              </HStack>
-              <Text fontSize="xl" pt={4}>
-                {outReach.name}
-              </Text>
-              <HStack pt={5}>
-                <TimeIcon color={"red"} />
-                <Text>{outReach.time}</Text>
-                
-                <InfoOutlineIcon color={'red'} />
-                <Text>{outReach.location}</Text>
-              </HStack>
-              <VStack>
-                <Text pt={4}>{outReach.description}</Text>
-              </VStack>
+        
+        <VStack>
+          <Stack direction={{ base : 'column', sm : 'column', md: 'column', lg : 'row'}} spacing={4}>
+            <Box>
+              <HStack>
+              <Box
+                maxW={360}
+                maxH={360}>
+                <Image src={outReach.imageUrl} />
+              </Box>
+              <Box>
+                <HStack>
+                  <Heading
+                    size={'md'}>{outReach.name}</Heading>
 
-              <Button flex='1' variant='ghost' leftIcon={<BiShare />} mt={4}>
-                Share
+                  <Tag my={5} colorScheme={'green'} size={'sm'} borderRadius={'full'}><TagLabel>Completed</TagLabel></Tag> 
+                </HStack> 
+                <HStack>
+                  <CalendarIcon />
+                  <Text>{outReach.time}</Text>
+                </HStack>
+                
+                <HStack
+                  pt={4}>
+                  <InfoOutlineIcon />
+                  <Text>{outReach.location}</Text>
+                </HStack>
+                
+                <Button
+                bg={"orange"}
+                rounded={"full"}
+                color={"white"}
+                mt={4}
+                size='sm'
+                _hover={{ bg: "orange.500=" }}
+              >
+                Read more
               </Button>
+              </Box>
+              </HStack>
             </Box>
-          </Box>
-        </Stack>
+
+            <Box>
+              <HStack>
+              <Box
+                maxW={360}
+                maxH={360}>
+                <Image src={outReach.imageUrl} />
+              </Box>
+              <Box>
+                <HStack>
+                  <Heading
+                    size={'md'}>{outReach.name}</Heading>
+
+                  <Tag my={5} colorScheme={'green'} size={'sm'} borderRadius={'full'}><TagLabel>Completed</TagLabel></Tag> 
+                </HStack> 
+                <HStack>
+                  <CalendarIcon />
+                  <Text>{outReach.time}</Text>
+                </HStack>
+                
+                <HStack
+                  pt={4}>
+                  <InfoOutlineIcon />
+                  <Text>{outReach.location}</Text>
+                </HStack>
+                
+                <Button
+                bg={"orange"}
+                rounded={"full"}
+                color={"white"}
+                mt={4}
+                size='sm'
+                _hover={{ bg: "orange.500=" }}
+              >
+                Read more
+              </Button>
+              </Box>
+              </HStack>
+            </Box>
+         
+          </Stack>
+{/* 
+          <Stack>
+
+          </Stack> */}
+        </VStack>
       </Container>
     </Box>
   );
