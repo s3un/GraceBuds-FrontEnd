@@ -36,7 +36,7 @@ const formattedDated = reachDate.toLocaleDateString();
 export default function Outreach() {
   return (
     <Box m={150}>
-      <Container maxW={{ sm : '9xl', lg : '100%'}}>
+      <Container maxW={{ base: "100%", sm: "100%", md: "100%", lg: "100%" }}>
         <Center>
           <Heading size={"md"} pb={10}>
             Our Latest Outreach
@@ -44,7 +44,7 @@ export default function Outreach() {
         </Center>
         
         <VStack>
-          <Stack direction={{ base : 'column', sm : 'column', md: 'column', lg : 'row'}} spacing={4}>
+          <Stack direction={{sm : 'column', md : "column", lg : 'row'}} spacing={4}>
             <Box>
               <HStack>
               <Box
@@ -52,7 +52,10 @@ export default function Outreach() {
                 maxH={360}>
                 <Image src={outReach.imageUrl} />
               </Box>
-              <Box>
+              <Box 
+                maxH={360}
+                maxW={360}
+                bg={'ornage.400'}>
                 <HStack>
                   <Heading
                     size={'md'}>{outReach.name}</Heading>

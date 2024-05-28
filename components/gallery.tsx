@@ -1,6 +1,10 @@
 'use client'
 
-import { Box, Container, Heading, Center, SimpleGrid } from '@chakra-ui/react'
+import { Box, Container, Heading, Center, SimpleGrid, Image } from '@chakra-ui/react'
+
+const galleryPhoto = {
+    imageUrl: "https://bit.ly/4bTKYnK",
+}
 
 export default function Gallery() {
     return(
@@ -10,11 +14,14 @@ export default function Gallery() {
               Gallery
             </Heading>
           </Center>
-          <SimpleGrid columns={2}>
+          <SimpleGrid columns={5}>
             <Box bg='tomato' height='80px'>
-                
+
             </Box>
-            <Box bg='tomato' height='80px'></Box>
+            <Box 
+                maxH={'80px'}>
+                <Image src={galleryPhoto.imageUrl} />
+            </Box>
             <Box bg='tomato' height='80px'></Box>
             <Box bg='tomato' height='80px'></Box>
             <Box bg='tomato' height='80px'></Box>
