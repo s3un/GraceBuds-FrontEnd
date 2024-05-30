@@ -53,8 +53,6 @@ export default function Outreach() {
                 <Image src={outReach.imageUrl} />
               </Box>
               <Box 
-                maxH={360}
-                maxW={360}
                 bg={'ornage.400'}>
                 <HStack>
                   <Heading
