@@ -44,7 +44,7 @@ export default function Outreach() {
         </Center>
         
         <VStack>
-          <Stack direction={{sm : 'column', md : "column", lg : 'row'}} spacing={4}>
+          <Stack direction={{sm : 'column', md : "column", lg : 'column'}} spacing={4}>
             <Box>
               <HStack>
               <Box

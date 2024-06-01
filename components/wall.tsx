@@ -37,6 +37,8 @@ export default function Wall() {
                 fontWeight={700}
                 lineHeight={1.2}
                 textAlign={'center'}
+                bgClip={'text'}
+                bgGradient='linear(to-l, orange, #FF0080)'
                 fontSize={useBreakpointValue({ base: "3xl", md: "7xl" })}
               >
                 Jesus is King
@@ -125,6 +127,7 @@ export default function Wall() {
                 </Text>
 
                 <Button
+                size={['sm', 'md', 'lg']}
                 bg={"whiteAlpha.300"}
                 rounded={"full"}
                 color={"white"}

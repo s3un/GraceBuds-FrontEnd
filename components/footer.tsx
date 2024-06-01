@@ -1,30 +1,40 @@
 "use client";
 
 // import { ReactNode } from "react";
-import { Box, Text, Container, SimpleGrid, Heading, Stack, Link } from "@chakra-ui/react";
+import {
+  Box,
+  Text,
+  Container,
+  SimpleGrid,
+  Heading,
+  Stack,
+  Link,
+  Input,
+  Textarea,
+  Button,
+  chakra,
+  useColorModeValue,
+  VisuallyHidden
+} from "@chakra-ui/react";
 
-// const ListHeader = ({ children }: { children: ReactNode }) => {
-//     return (
-//       <Text fontWeight={'500'} fontSize={'lg'} mb={2}>
-//         {children}
-//       </Text>
-//     );
-//   };
+import { FaInstagram, FaTwitter, FaYoutube } from 'react-icons/fa';
+import { ReactNode } from 'react';
 
 const Podcast = {
-    imageURL: '',
-    imageAlt: 'this is suppose to be an image',
-    Title: '',
-    Date: ''
-}
+  imageURL: "",
+  imageAlt: "this is suppose to be an image",
+  Title: "",
+  Date: "",
+};
+
 
 export default function Footer() {
   return (
-    <Box bg={"black"}>
+    <Box bg={"#f86f2d"}>
       <Container color="white" maxW={"6xl"}>
-        <SimpleGrid columns={{ base: 1, sm: 2, md: 4 }} spacing={8}>
-          <Box>
-            <Heading size={"md"} mt={10}>
+        <SimpleGrid columns={{ base: 1, sm: 2, md: 4, lg : 3 }} spacing={20}>
+          <Box mt={10}>
+            <Heading size={"md"}>
               About us
             </Heading>
             <Text pt={5}>
@@ -32,16 +42,35 @@ export default function Footer() {
             </Text>
           </Box>
 
-          <Box>
-            <Heading size={"md"} mt={10}>
-              Recent Podcasts
+          <Box mt={10}>
+            <Heading size={"md"} >
+              Socials
             </Heading>
-            <Text pt={5}>
-              Hello we are gracebud and we do what we know how to do best
-            </Text>
+            <Stack direction={{ ld: 'row'}} mt={5}>
+
+            </Stack>
+          </Box>
+          <Box>
+            <Stack my={10}>
+              <Input 
+                placeholder="Your Name"/>
+              <Input placeholder="Email address" />
+              <Textarea placeholder="Leave your message" />
+              <Button
+                bg={"whiteAlpha.300"}
+                rounded={"full"}
+                color={"white"}
+                size='md'
+                _hover={{ bg: "whiteAlpha.500" }}
+              >
+                Submit
+              </Button>
+            </Stack>
           </Box>
         </SimpleGrid>
-        <Box></Box>
+        <Text
+          textAlign={'center'}
+          py={4}>© 2024 GraceBuds. All rights reserved</Text>
       </Container>
     </Box>
   );

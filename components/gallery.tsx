@@ -1,9 +1,9 @@
 'use client'
 
-import { Box, Center, Heading, SimpleGrid, Stack, Image } from '@chakra-ui/react'
+import { Box, Center, Heading, SimpleGrid, Image } from '@chakra-ui/react'
 import { useState } from 'react';
 
-const handleImageClick = (url) => {
+const handleImageClick = (url: string | URL | undefined) => {
   window.open(url)
 }
 

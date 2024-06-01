@@ -9,6 +9,7 @@ import Outreach from "@/components/outreach";
 import Wall from "@/components/wall";
 import Aboutus from "@/components/aboutus";
 import Gallery from '@/components/gallery'
+import Streams from '@/components/streams'
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -29,9 +30,11 @@ export default function RootLayout({
           {children}
           <Wall />
           <Aboutus />
+          <Streams></Streams>
           <Outreach />
-          <Newsletter></Newsletter>
+          
           <Gallery />
+          <Newsletter></Newsletter>
           <Footer />
         </Providers>
       </body>

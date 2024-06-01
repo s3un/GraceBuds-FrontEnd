@@ -1,47 +1,48 @@
-'use client'
+"use client";
 
-import { 
-    Box, 
-    Container, 
-    Heading, 
-    Stack, 
-    Input, 
-    Button, 
-    Flex,
-    Textarea,
-    Image,
-    Spacer } from '@chakra-ui/react'
-import styles from '@/components/global.module.css'
+import {
+  Box,
+  Container,
+  Heading,
+  Center,
+  Stack,
+  Input,
+  Button,
+  Flex,
+  Textarea,
+  Image,
+  Spacer,
+} from "@chakra-ui/react";
 
-import emage from '../public/pic.jpg'
 
 export default function Newsletter() {
-    return(
-        <Box>
-            <Container 
-                maxW={'6xl'}
-                mt={30}
-                mb={30}>
-                <Flex justifyContent="center" alignItems="center" >
-                    <Box 
-                        maxH={50}
-                        maxW={600}>
-                        <Image src='emage' alt='Group picture'/>
-                    </Box>
-                    <Spacer />
-                    <Box>
-                        <Heading 
-                            size={'md'}
-                            pb={10}> Share your thought! </Heading>
-                        <Stack>
-                            <Input placeholder='Your Name' htmlSize={50}/>
-                            <Input placeholder='Email address'/>
-                            <Textarea placeholder='Leave your message' />
-                            <Button>Submit</Button>
-                        </Stack>
-                    </Box>
-                </Flex>
-            </Container>
-        </Box>
-    )
+  return (
+    <Box
+        backgroundColor={"#fa8f3d"}>
+      <Container 
+        py={50}>
+        <Center>
+          <Heading size={"lg"} pb={10}>
+            Be Inspired
+          </Heading>
+        </Center>
+        <Flex
+            gap={4}
+            >
+        <Input placeholder="Email address" />
+        <Button
+           
+            size={['sm', 'md']}
+               bg={"whiteAlpha.300"}
+               borderColor={'black'}
+                rounded={"full"}
+                color={"white"}
+                _hover={{ bg: "whiteAlpha.500" }}
+              >
+                Subscribe
+              </Button>
+        </Flex>
+      </Container>
+    </Box>
+  );
 }
